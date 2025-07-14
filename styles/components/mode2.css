@@ -1,0 +1,42 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #000;
+}
+
+
+.card {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    background-color: #fff;
+}
+
+#addPropositionButton {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+}
+
+body.dark-mode .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #ffffff;
+}

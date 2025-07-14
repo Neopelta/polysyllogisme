@@ -1,0 +1,97 @@
+.modes {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.modes h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.etapes {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.etapes h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.etapes ol, 
+.etapes ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.etapes li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.etapes em {
+    display: block;
+    margin-top: 1rem;
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+.etapes table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.etapes th,
+.etapes td {
+    padding: 1rem;
+    border: 1px solid #E2E8F0;
+    text-align: left;
+}
+
+.etapes th {
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 500;
+}
+
+.etapes tr:nth-child(even) {
+    background-color: var(--card-background);
+}
+
+.etapes tr:hover {
+    background-color: var(--header-hover);
+}
+
+.etapes strong {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .modes {
+        padding: 1rem;
+    }
+
+    .etapes {
+        padding: 1rem;
+    }
+
+    .etapes table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .etapes th,
+    .etapes td {
+        min-width: 200px;
+    }
+}

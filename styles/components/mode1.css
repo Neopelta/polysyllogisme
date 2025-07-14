@@ -1,0 +1,112 @@
+.button{
+    background-color: var(--background-color);
+	color: var(--text-color);
+	border: none;
+	padding: 10px 20px;
+	margin: 0 5px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.close {
+    visibility: hidden;
+}
+
+.columns-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Quantifier, .StativeVerb {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.columns-container-end {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.rule {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.columns-container {
+    display: flex;              
+    justify-content: center;
+    gap: 25px;
+}
+
+.Quantifier,
+.StativeVerb {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+#premise1 select, #premise2 select {
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.conclusion-form-container {
+    display: flex;
+    gap: 1cm;
+}
+
+.conclusion-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.conclusion-radio-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.conclusion-input-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.conclusion-input-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.conclusion-input-column label {
+    margin-bottom: 5px;
+}
+
+.conclusion-section select,
+.conclusion-section input[type="text"] {
+    width: 150px;
+}
+
+.conclusion-section h4 {
+    margin-bottom: 10px;
+}
+
+.conclusion-section:nth-child(2) .conclusion-radio-group {
+    margin-top: 34px;
+}

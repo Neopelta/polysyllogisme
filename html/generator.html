@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>256 Combinaisons</title>
+    <link rel="stylesheet" type="text/css" href="../styles/base/main.css">
+	<link rel="stylesheet" type="text/css" href="../styles/base/header.css">
+    <script type="module" src="../ts/generator.js"></script>
+    <script type="module" src="../ts/bundle.js"></script>
+    <script type="module" src="../ts/main.js"></script>
+</head>
+<body>
+    <div class="header">
+		<div class="left-section">
+			<button id="btn_mode_1_page_generator" onclick="location.href='Syllogism-Mode1.html'">Mode 1</button>
+			<button id="btn_mode_2_page_generator" onclick="location.href='Syllogism-Mode2.html'">Mode 2</button>
+		</div>
+		<div class="right-section">
+            <button id="btn_generator_page_generator" class="active" onclick="location.href='generator.html'">Générateur</button>
+			<button id="btn_tutorial_page_generator" onclick="location.href='tutorial.html'">Tutorial</button>
+			<button id="btn_editor_page_generator" onclick="location.href='editor.html'">Editor</button>
+			<button id="btn_about_page_generator" onclick="location.href='about.html'">About</button>
+			<select id="language">
+				<option value="fr" class="fr">&#x1F1EB;&#x1F1F7;</option>
+				<option value="en" class="us">&#x1F1FA;&#x1F1F8;</option>
+			</select>
+		</div>
+	</div>
+    <div class="main_content">
+        <button id="darkModeButton">
+			🌙 Mode Sombre
+		</button>
+        <div class="title">
+			<h1 id="title_page_mode1">Syllogism Validator</h1>
+			<h2 id="subtitle_page_mode1">Check The Validity Of Any Sylogism</h2>
+			<h2>Generator</h2>
+		</div>
+        <div class="card">
+            <div class="subCard">
+                <h4 id="title_conclusion_subject_page_mode1">Subject</h4>
+                <input type="text" id="conclusion-subject" class="textField" placeholder="Placeholder">
+                <h4 id="title_conclusion_subject_page_mode1">Predicat</h4>
+                <input type="text" id="conclusion-subject" class="textField" placeholder="Placeholder">
+                <h4 id="title_conclusion_subject_page_mode1">MT</h4>
+                <input type="text" id="conclusion-subject" class="textField" placeholder="Placeholder">
+            </div>
+        </div>
+        <div id="Rules_applied">
+            <h3 id="title_rules_applied_page_mode1">Régles à appliquer</h3>
+            <div class="rules-content">
+                <div class="column">
+                    <div class="rule">
+                        <input type="checkbox" id="rmt" name="rmt" checked />
+                        <label id="rule_rmt_applied_page_mode1" for="rmt">Rmt (Middle Term Rule)</label>
+                        <span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_rmt">S'assure que le moyen terme est distribué au moins une fois dans les prémisses</span></span>
+                    </div>
+                    <div class="rule">
+                        <input type="checkbox" id="rnn" name="rnn" checked />
+                        <label id="rule_rnn_applied_page_mode1" for="rnn">Rnn (Non-Negativity Rule)</label>
+                        <span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_rnn">Vérifie qu'il n'y a pas deux prémisses négatives dans le syllogisme</span></span>
+                    </div>
+                    <div class="rule">
+                        <input type="checkbox" id="raa" name="raa" checked />
+                        <label id="rule_raa_applied_page_mode1" for="raa">Raa (Affirmation-Affirmation Rule)</label>
+                        <span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_raa">Contrôle qu'il n'y a pas deux prémisses particulières (existentielles)</span></span>
+                    </div>
+                    <div class="rule">
+                        <input type="checkbox" id="rp" name="rp" checked />
+                        <label id="rule_rp_applied_page_mode1" for="rp">Rp (Premise Rule)</label>
+                        <span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_rp">Vérifie la validité des prémisses du syllogisme</span></span>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="rule">
+                        <input type="checkbox" id="rlh" name="rlh" checked />
+                        <label id="rule_rlh_applied_page_mode1" for="rlh">Rlh (Hypothesis Linking Rule)</label>
+                        <span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_rlh">S'assure que la conclusion ne contient pas d'information qui n'est pas dans les prémisses</span></span>
+                    </div>
+                    <div class="rule">
+                        <input type="checkbox" id="rn" name="rn" checked />
+                        <label id="rule_rn_applied_page_mode1" for="rn">Rn (Negativity Rule)</label>
+                        <span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_rn">Vérifie que si une prémisse est négative, la conclusion doit être négative</span></span>
+                    </div>
+                    <div class="rule">
+                        <input type="checkbox" id="rpp" name="rpp" checked />
+                        <label id="rule_rpp_applied_page_mode1" for="rpp">Rpp (Positive Premise Rule)</label>
+                        <span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_rpp">Contrôle que si les deux prémisses sont positives, la conclusion doit être positive</span></span>
+                    </div>
+                    <div class="rule">
+                        <input type="checkbox" id="ruu" checked />
+                        <label id="rule_ruu_applied_page_mode1" for="ruu">Hypothesis of existence</label>
+                        <span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_hypothese">Vérifie si les termes du syllogisme sont supposés non vides</span></span>
+                    </div>
+
+                    <div class="rule"  style="display: none">
+                        <input type="checkbox" id="ininter" checked  />
+                        <label id="rule_ruu_applied_page_mode1" for="ininter">ininter</label>
+                        <span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_hypothese">Vérifie si les termes du syllogisme sont supposés non vides</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="buttonCard">
+            <button class="button" id="validerm1">Verification</button>
+            <input class="button" type="reset" id="reset" value="Reset"/>
+        </div>
+    </div>
+
+    <h1>256 Combinaisons</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>P1</th>
+                <th>P2</th>
+                <th>C</th>
+                <th>Figure</th>
+                <th>Rmt</th>
+                <th>Rnn</th>
+                <th>Raa</th>
+                <th>Rp</th>
+                <th>Rlh</th>
+                <th>Rn</th>
+                <th>Rpp</th>
+                <!--<th>Validité globale</th>-->
+                <th>Hypothesis of existence</th>
+                <th>inintressant</th>
+                <th>Validité globale</th>
+            </tr>
+        </thead>
+        <tbody id="combination-table">
+            <!-- Les combinaisons seront insérées ici dynamiquement -->
+        </tbody>
+    </table>
+</body>
+</html>

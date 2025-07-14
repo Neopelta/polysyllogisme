@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../styles/base/main.css">
+	<link rel="stylesheet" type="text/css" href="../styles/base/header.css">
+    <link rel="stylesheet" type="text/css" href="../styles/mode2.css">
+    <script type="module" src="../ts/DataInput.js"></script>
+	<script type="module" src="../ts/bundle.js"></script>
+    <script type="module" src="../ts/generator.js"></script>
+    <script type="module" src="../ts/main.js"></script>
+</head>
+<body>
+   <div class="header">
+		<div class="left-section">
+			
+            <button id="btn_mode_1_page_mode2" onclick="location.href='Syllogism-Mode1.html'">Mode 1</button>
+            <button  id="btn_mode_2_page_mode2" class="active" id="btn_mode_2_page_mode2">Mode 2</button>
+		</div>
+		<div class="right-section">
+			<button id="btn_generator_page_mode1" onclick="location.href='generator.html'">Générateur</button>
+			<button id="btn_tutorial_page_mode1" onclick="location.href='tutorial.html'">Tutorial</button>
+			<button id="btn_editor_page_mode1" onclick="location.href='editor.html'">Editor</button>
+			<button id="btn_about_page_mode1" onclick="location.href='about.html'">About</button>
+			<select id="language">
+				<option value="fr">&#x1F1EB;&#x1F1F7;</option>
+				<option value="en">&#x1F1FA;&#x1F1F8;</option>
+			</select>
+		</div>
+	</div>
+    <div class="main_content">
+        <button id="darkModeButton">
+			🌙 Mode Sombre
+		</button>
+        <div class="title">
+            <h1 id="title_page_mode2">Syllogism Validator</h1>
+            <h2 id="subtitle_page_mode2">Check The Validity Of Any Sylogism</h2>
+            <h2>MODE 2</h2>
+        </div>
+        <!--
+        <div class="btn_import_export">
+            <input class="button" type="button" id="import_page_mode2" value="import"/> 
+            <input class="button" type="button" id="export_page_mode2" value="Export"/>
+        </div>
+        -->
+     
+        <form>
+            <div id="test" class="propositions-container">
+            <div id="premise1" class="card">
+                <h3>
+                    <span id="title_premise1_page_mode2">Premise 1</span>
+                    <span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_premise1">Relie le terme majeur au moyen terme</span></span>
+                   
+                </h3> 
+                <div class="subCard">
+                    <h4 id="quantifier_h4">Quantifier</h4>
+                    <div class="radio-group">
+                        <input type="radio" id="Universal1" name="quantity1" checked/>
+                        <label id="universal1_page_mode2_label" for="universalQ1_page_mode2">Universal</label>
+                        <input type="radio" id="Existentiel1" name="quantity1" />
+                        <label id="existentielQ1_page_mode2_label" for="existentielQ1_page_mode2">Existentiel</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="negativeQ1" name="quantifierQuality1" checked/>
+                        <label id="negativeQ1_page_mode2_label" for="negativeQ1_page_mode2">Negative</label>
+                        <input type="radio" id="positiveQ1" name="quantifierQuality1" />
+                        <label id="positiveQ1_page_mode2_label" for="positiveQ1_page_mode2">Positive</label>
+                    </div>
+                    <select id="selectQuantifier1" class="select">
+                        <option value="" disabled selected hidden>PlaceHolder</option>
+                    </select>
+                </div>
+                <div class="subCard" id="subject1_div">
+                    <h4>Subject</h4>
+                    <input type="text" id="subject1" name="subject1" class="textField" placeholder="Placeholder"/>
+                </div>
+                <div class="subCard">
+                    <h4 id="title_stative_verb_premise1_page_mode2">Stative Verb</h4>
+					<div class="radio-group">
+						<input type="radio" id="negativeSV1_page_mode2" name="stativeQuality1" checked/>
+						<label id="negativeSV1_page_mode2_label" for="negativeSV1_page_mode2">Negative</label>
+						<input type="radio" id="positiveSV1_page_mode2" name="stativeQuality1" />
+						<label id="positiveSV1_page_mode2_label" for="positiveSV1_page_mode2">Positive</label>
+					</div>
+					<select id="selectStativeVerb1" class="select">
+						<option value="" disabled selected hidden>PlaceHolder</option>
+					</select>
+                </div>
+                <div class="subCard">
+                    <h4 id="title_predicat_premise1_page_mode2">Predicat</h4>
+                    <input type="text" id="predicate_premise1_page_mode2" name="predicate_premise1_page_mode2" class="textField" placeholder="Placeholder">
+                </div>
+            </div>
+            <div id="premise2" class="card">
+                <h3>
+                    <span id="title_premise2_page_mode2">Premise 2</span>
+                    <span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_premise2">Relie le terme mineur au moyen terme</span></span>
+                </h3>
+                <div class="subCard">
+                    <h4 id="title_premise2_quantifier_page_mode2">Quantifier</h4>
+                    <div class="radio-group">
+                        <input type="radio" id="Universal2" name="quantity2" checked/>
+                        <label id="universalQ2_page_mode2_label" for="universalQ2_page_mode2">Universal</label>
+                        <input type="radio" id="Existentiel2" name="quantity2">
+                        <label id="existentielQ2_page_mode2_label" for="existentielQ2_page_mode2">Existential</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="negativeQ2" name="quantifierQuality2" checked/>
+                        <label id="negativeQ2_page_mode2_label" for="negativeQ3_page_mode2">Negative</label>
+                        <input type="radio" id="positiveQ2" name="quantifierQuality2"/>
+                        <label id="positiveQ2_page_mode2_label" for="positiveQ2_page_mode2">Positive</label>
+                    </div>
+                    <select id="selectQuantifier2" class="select">
+                        <option value="" disabled selected hidden>PlaceHolder</option>
+                    </select>
+                </div>
+            
+                <div class="subCard">
+                    <h4 id="title_premise2_subject_page_mode2">Subject</h4>
+                    <div id="subject-radio-group">
+                        <input type="radio" id="subject_premise2" name="subject2" value="subject"/>
+                        <label for="subject_premise2">Subject P1</label>
+                        <input type="radio" id="predicat_premise2" name="subject2" value="predicat"/>
+                        <label for="predicat_premise2">Predicat P1</label>
+                        <input type="radio" id="other_radio_premise2" name="subject2" value="other"/>
+                        <label for="other_radio_premise2">Autre</label>
+                        <input type="text" id="other_text_premise2" name="other_text_premise2" class="textField" placeholder="Tapez votre sujet" style="display: none;"/>
+                    </div>
+                </div>
+            
+                <div class="subCard">
+                    <h4 id="title_stative_verb_premise2_page_mode2">Stative Verb</h4>
+                    <div class="radio-group">
+                        <input type="radio" id="negativeSVPremise2_page_mode2" name="conclusion-verb-quality" checked/>
+                        <label id="negativeSVPremise2_page_mode2_label" for="negativeSVPremise2_page_mode2">Negative</label>
+                        <input type="radio" id="positiveSVPremise2_page_mode2" name="conclusion-verb-quality">
+                        <label id="positiveSVPremise2_page_mode2_label" for="positiveSVPremise2_page_mode2">Positive</label>
+                    </div>
+                    <select id="selectStativeVerb2" class="select">
+                        <option value="" disabled selected hidden>PlaceHolder</option>
+                    </select>
+                </div>
+            
+                <div class="subCard">
+                    <h4>Predicat</h4>
+                    <!-- Champ texte pour le prédicat -->
+                    <input type="text" id="text_predicat" name="text_predicat" class="textField" placeholder="Tapez votre prédicat ici" style="display: none;"/>
+                    <!-- Boutons radio pour le prédicat -->
+                    <div id="predicate-radio-group" style="display: none;">
+                        <input type="radio" id="predicate_subjectP1" name="predicateOption" value="subjectP1"/>
+                        <label for="predicate_subjectP1">Subject P1</label>
+                        <input type="radio" id="predicate_predicatP1" name="predicateOption" value="predicatP1"/>
+                        <label for="predicate_predicatP1">Predicat P1</label>
+                    </div>
+                </div>
+            </div>
+            <button class="button" id="addPropositionButton">Add Proposition</button>
+            </div>
+            <div id="propositionsDisplay" class="propositions-list">
+                <!-- Les propositions créées s'afficheront ici -->
+            </div>
+            <div id="Conclusion" class="card2">
+                <h3>Conclusion</h3>
+                
+                <!-- Section Quantificateur -->
+                <div class="subCard">
+                    <h4>Quantifier</h4>
+                    <div class="radio-group">
+                        <input type="radio" id="Universal99" name="quantity99" value="universal" checked>
+                        <label for="Universal99">Universal</label>
+                        <input type="radio" id="Existentiel99" name="quantity99" value="existentiel">
+                        <label for="Existentiel99">Existentiel</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="negativeQ99" name="quantifierQuality99" value="negative" checked>
+                        <label for="negativeQ99">Negative</label>
+                        <input type="radio" id="positiveQ99" name="quantifierQuality99" value="positive">
+                        <label for="positiveQ99">Positive</label>
+                    </div>
+                    <select id="selectQuantifier99" class="select quantifier-dropdown">
+                        <option value="" disabled selected hidden>PlaceHolder</option>
+                    </select>
+                </div>
+            
+                <!-- Section Sujet -->
+                <div class="subCard">
+                    <h4>Subject</h4>
+                    <div class="radio-group">
+                        <input type="radio" id="isolated_term" name="conclusionSubject" value="isolated" checked>
+                        <label for="isolated_term">Terme Isolé de la dernière prémisse</label>
+                    </div>
+                </div>
+            
+                <div class="subCard" id="predicate-choice-container">
+                    <h4>Predicate</h4>
+                    <div class="radio-group">
+                        <input type="radio" id="predicate_last_subject" name="conclusionPredicate" value="lastSubject" checked>
+                        <label for="predicate_last_subject">Terme Isolé de la première prémisse</label>
+                    </div>
+                </div>
+            
+                <!-- Section Verbe Statique -->
+                <div class="subCard">
+                    <h4>Stative Verb</h4>
+                    <div class="radio-group">
+                        <input type="radio" id="negativeSVConclusion" name="conclusionVerbQuality" value="negative" checked>
+                        <label for="negativeSVConclusion">Negative</label>
+                        <input type="radio" id="positiveSVConclusion" name="conclusionVerbQuality" value="positive">
+                        <label for="positiveSVConclusion">Positive</label>
+                    </div>
+                    <select id="selectStativeVerbConclusion" class="select">
+                        <option value="" disabled selected hidden>PlaceHolder</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="Rules_applied">
+				<h3 id="title_rules_applied_page_mode1">Régles à appliquer</h3>
+				<div class="rules-content">
+					<div class="column">
+						<div class="rule">
+							<input type="checkbox" id="rmt" name="rmt" checked />
+							<label id="rule_rmt_applied_page_mode1" for="rmt">Rmt (Middle Term Rule)</label>
+							<span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_rmt">S'assure que le moyen terme est distribué au moins une fois dans les prémisses</span></span>
+						</div>
+						<div class="rule">
+							<input type="checkbox" id="rnn" name="rnn" checked />
+							<label id="rule_rnn_applied_page_mode1" for="rnn">Rnn (Non-Negativity Rule)</label>
+							<span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_rnn">Vérifie qu'il n'y a pas deux prémisses négatives dans le syllogisme</span></span>
+						</div>
+						<div class="rule">
+							<input type="checkbox" id="raa" name="raa" checked />
+							<label id="rule_raa_applied_page_mode1" for="raa">Raa (Affirmation-Affirmation Rule)</label>
+							<span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_raa">Contrôle qu'il n'y a pas deux prémisses particulières (existentielles)</span></span>
+						</div>
+						<div class="rule">
+							<input type="checkbox" id="rp" name="rp" checked />
+							<label id="rule_rp_applied_page_mode1" for="rp">Rp (Premise Rule)</label>
+							<span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_rp">Vérifie la validité des prémisses du syllogisme</span></span>
+
+						</div>
+					</div>
+					<div class="column">
+						<div class="rule">
+							<input type="checkbox" id="rlh" name="rlh" checked />
+							<label id="rule_rlh_applied_page_mode1" for="rlh">Rlh (Hypothesis Linking Rule)</label>
+							<span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_rlh">S'assure que la conclusion ne contient pas d'information qui n'est pas dans les prémisses</span></span>
+						</div>
+						<div class="rule">
+							<input type="checkbox" id="rn" name="rn" checked />
+							<label id="rule_rn_applied_page_mode1" for="rn">Rn (Negativity Rule)</label>
+							<span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_rn">Vérifie que si une prémisse est négative, la conclusion doit être négative</span></span>
+						</div>
+						<div class="rule">
+							<input type="checkbox" id="rpp" name="rpp" checked />
+							<label id="rule_rpp_applied_page_mode1" for="rpp">Rpp (Positive Premise Rule)</label>
+							<span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_rpp">Contrôle que si les deux prémisses sont positives, la conclusion doit être positive</span></span>
+						</div>
+						<div class="rule">
+							<input type="checkbox" id="ruu" checked />
+							<label id="rule_ruu_applied_page_mode1" for="ruu">Hypothesis of existence</label>
+							<span class="tooltip">&#x24D8;<span class="tooltiptext" id="tooltip_hypothese">Vérifie si les termes du syllogisme sont supposés non vides</span></span>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="buttonCard">
+                <button class="button" id="btn_valid_page_mode2">Verification</button>
+                <input class="button" type="reset" id="reset" value="Reset"/>
+            </div>    
+        </form>
+        <div id="Result" class="Result">
+			********** Result ***********
+		</div>
+    </div>
+</body>
+</html>

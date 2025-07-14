@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../styles/components/editor.css">
+	<link rel="stylesheet" type="text/css" href="../styles/base/main.css">
+    <link rel="stylesheet" type="text/css" href="../styles/base/header.css">
+
+    <script type="module" src="../ts/DataInput.js"></script>
+    <script type="module" src="../ts/editor.js"></script>
+	<script type="module" src="../ts/bundle.js"></script>
+    <script type="module" src="../ts/main.js"></script>
+</head>
+<body>
+    <div class="header">
+		<div class="left-section">
+		<button id="btn_mode_1_page_editor" onclick="location.href='Syllogism-Mode1.html'">Mode 1</button>
+        <button id="btn_mode_2_page_editor" onclick="location.href='Syllogism-Mode2.html'">Mode 2</button>
+		</div>
+		<div class="right-section">
+        <button id="btn_generator_page_editor" onclick="location.href='generator.html'">Générateur</button>
+        <button id="btn_tutorial_page_editor" onclick="location.href='tutorial.html'">Tutorial</button>
+        <button id="btn_editor_page_editor" class="active">Editor</button>
+        <button id="btn_about_page_editor" onclick="location.href='about.html'">About</button>
+        <select id="language">
+            <option value="fr">&#x1F1EB;&#x1F1F7;</option>
+            <option value="en">&#x1F1FA;&#x1F1F8;</option>
+        </select>
+		</div>
+    </div>
+    <div class="main_content">
+        <button id="darkModeButton">
+			🌙 Mode Sombre
+		</button>
+        <div class="title">
+            <h1 id="title_page_editor">Syllogism Validator</h1>
+            <h2 id="subtitle_page_editor">Check The Validity Of Any Sylogism</h2>
+            <h2 id="title_editor">Editor</h2>
+        </div>
+    <div class="card">
+        <div class="subCard">
+            <h3 id="title_quantifier_editor">Quantifier</h3>
+            <h4 id="title_add_quantifier_editor">Add a quantifier</h4>
+            <div>
+                <input type="radio" id="Add-Universal" name="quantity1" value="universal" checked/>
+                <label id="add_universal_page_editor_label" for="add_universal_page_editor">Universal</label>
+                <input type="radio" id="Add-Existentiel" name="quantity1" value="existential"/>
+                <label id="add_existentiel_page_editor_label" for="add_existentiel_page_editor">Existential</label>
+            </div>
+            <div>
+                <input type="radio" id="Add-Negative" name="quality1" value="negative" checked/>
+                <label id="add_negative_page_editor_label" for="add_negative_page_editor">Negative</label>
+                <input type="radio" id="Add-Positive" name="quality1" value="positive"/>
+                <label id="add_positive_page_editor_label" for="add_positive_page_editor">Positive</label>
+            </div>
+            
+            <div>
+                <input type="text" id="quantifierInput" class="textField" placeholder="Placeholder"/>
+                <button id="addButton" class="button">Add</button>
+            </div>
+        </div>
+        <div class="subCard">
+            <h4 id="title_delete_editor">Update</h4>
+            <div>
+                <select id="deleteQuantifierSelect" class="select" name="editor_deleteQuantifierSelect">
+                    <option value="" disabled selected hidden>PlaceHolder</option>
+                </select>
+                
+                <input type="text" id="updateQuantifierInput" class="textField" placeholder="Replace"/>
+                <button id="deleteButton" class="button">Delete</button> 
+                <button id="updateButton" class="button">Modification</button>
+            </div>
+        </div>
+
+        <div>
+            <h4>Quantifier List</h4>
+            <ul id="quantifierList"></ul>
+            
+        </div>
+    </div>
+</html>

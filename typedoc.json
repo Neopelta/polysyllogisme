@@ -1,0 +1,10 @@
+{
+    "entryPoints": ["ts/DataInput.ts", "ts/enums.ts", "ts/syllogisms.ts", "ts/rules.ts"], 
+    "out": "document",                     
+    "tsconfig": "tsconfig.json",       
+    "name": "Documentation Polysyllogism", 
+    "includeVersion": true,            
+    "excludePrivate": true,            
+    "theme": "default",                
+    "excludeExternals": true           
+  }

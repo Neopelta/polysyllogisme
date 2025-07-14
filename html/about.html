@@ -1,0 +1,58 @@
+
+<!doctype html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../styles/base/main.css">
+    <link rel="stylesheet" type="text/css" href="../styles/base/header.css">
+
+	<script type="module" src="../ts/DataInput.js"></script>
+	<script type="module" src="../ts/bundle.js"></script>
+	<script type="module" src="../ts/main.js"></script>
+</head>
+<body>
+	<div class="header">
+		<div class="left-section">
+			<button id="btn_mode_1" onclick="location.href='Syllogism-Mode1.html'">Mode guidé</button>
+			<button id="btn_mode_2" onclick="location.href='Syllogism-Mode2.html'">Mode libre</button>
+		</div>
+		<div class="right-section">
+			<button id="btn_generator_page_about" onclick="location.href='generator.html'">Générateur</button>
+			<button id="btn_tutorial" onclick="location.href='tutorial.html'">Tutorial</button>
+			<button id="btn_editor" onclick="location.href='editor.html'">Editor</button>
+			<button id="btn_about" class="active" >About</button>
+			<select id="language">
+				<option value="fr">&#x1F1EB;&#x1F1F7;</option>
+				<option value="en">&#x1F1FA;&#x1F1F8;</option>
+			</select>
+		</div>
+	</div>
+	<div class="main_content">
+		<button id="darkModeButton">
+			🌙 Mode Sombre
+		</button>
+		<div class="title">
+			<h1 id="title_page_about">Syllogism Validator</h1>
+			<h2 id="subtitle_page_about">Check The Validity Of Any Sylogism</h2>
+			<h2 id="title_about">About</h2>
+		</div>
+		<div class="subCard">
+			<h3 id="title_about_Syllogisme_Validator">About Syllogisme Validator</h3>
+			<h3 id="title_check_the_validity_of">Check the validity of your syllogism</h3>
+			<p id="about_page_paragraphe1">
+				Syllogism Validator is an online tool designed to help users assess the logical validity of syllogisms. This project is
+				created as part of a coursework assignment for students in the Master’s program at the University of Poitiers,
+				UFR Sciences Fondamentales et Appliquées (SFA).
+			</p>
+			<br>
+			<p id="about_page_paragraphe2">
+				The project is developed by a group of five students, four of whom are pursuing a Master 1 in Software
+				Engineering and Big Data, and one in Software Engineering and Software Design. Our goal is to provide a userfriendly platform that assists students, educators, and logic enthusiasts in verifying the structure of their
+				arguments.
+			</p>
+		</div>
+	</div>
+</body>
+</html>

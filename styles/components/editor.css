@@ -1,0 +1,24 @@
+.btn_import_export {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.card .subCard > div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card .textField, 
+.card .select {
+    flex: 1;
+    max-width: 300px;
+}
+
+.card .subCard .button {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
