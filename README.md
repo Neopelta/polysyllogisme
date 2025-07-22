@@ -215,6 +215,10 @@ PROJET_SYLLOGIS/
 - Detailed progress statistics
 - PDF exercise creation
 
+  ## Licence
+
+Academic project - Université de Poitiers (2024)
+
 ---
 
 *University project at University of Poitiers - Team of 5 developers - 2024*
